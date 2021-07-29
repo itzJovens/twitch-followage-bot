@@ -2,9 +2,9 @@
   "name": "hello-node",
   "version": "0.0.1",
   "description": "A simple Node app built on fastify, instantly up and running.",
-  "main": "bot.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "tmi.js": "^1.8.3"
