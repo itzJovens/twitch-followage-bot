@@ -13,6 +13,20 @@ const opts = {
     ]
 };
 
+
+
+
+// Create a client with our options
+const client = new tmi.client(opts);
+
+// Register our event handlers (defined below)
+client.on('message', onMessageHandler);
+client.on('connected', onConnectedHandler);
+client.on("USERNOTICE", onMessageHandler);
+
+// Connect to Twitch:
+client.connect();
+
 client.on("resub", function (channel, username, months, message, userstate, methods) {
     // Do your stuff.
   let cumulativeMonths = userstate['msg-param-cumulative-months'];
@@ -39,19 +53,6 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || SRCHFPS`)}
 })
-
-
-// Create a client with our options
-const client = new tmi.client(opts);
-
-// Register our event handlers (defined below)
-client.on('message', onMessageHandler);
-client.on('connected', onConnectedHandler);
-client.on("USERNOTICE", onMessageHandler);
-
-// Connect to Twitch:
-client.connect();
-
 
 // TSM_DAEQUAN FOLLOWAGE 
 // FIRST PART
