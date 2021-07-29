@@ -13,7 +13,32 @@ const opts = {
     ]
 };
 
+client.on("resub", function (channel, username, months, message, userstate, methods) {
+    // Do your stuff.
+  let cumulativeMonths = userstate['msg-param-cumulative-months'];
+// SRCHFPS
+  if (channel.includes('srchfps')){
+    client.say('itzjovens', `PowerUpL Thanks for resubscribing @${username} for ${cumulativeMonths} MONTHS! PowerUpR`);
+    console.log(`* Executed Resub || SRCHFPS`)}
+});
 
+client.on("subscription", function (channel, username, method, message, userstate) {
+    // Do your stuff.
+// SRCHFPS
+  if (channel.includes('srchfps')){
+    client.say('srchfps', `PowerUpR Thanks for subscribing @${username} PowerUpR ||`);
+    console.log(`* Executed Sub || SRCHFPS`)}
+});
+
+client.on("subgift", (channel, username, streakMonths, recipient, methods, userstate) => {
+    // Do your stuff.
+  let senderCount = ~~userstate["msg-param-sender-count"];
+// SRCHFPS
+  if (channel.includes('srchfps')) {
+    client.say('srchfps', `PowerUpL GIFTED SUBS PowerUpR ||`);
+    let senderCount = ~~userstate["msg-param-sender-count"];
+    console.Log(`* Executed Gifted Subs || SRCHFPS`)}
+})
 
 
 // Create a client with our options
