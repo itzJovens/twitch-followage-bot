@@ -59,6 +59,7 @@ client.on('message', (channel, tags, message, self) => {
   if (channel.includes('itzjovens'))
 	if(message.toLowerCase().includes('!ping')) {
     client.say('itzjovens', `@${tags.username}, Pong!`);
+	console.log(`Executed ping in #itzjovens channel. BOT IS ALIVE!`)
 	}
 });
 
