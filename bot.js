@@ -9,7 +9,7 @@ const opts = {
         password: 'oauth:u79zcmhtqum7o9we321k3xhpeh9x71'
     },
     channels: [
-        'itzjovens', 'uknwmyname', 'srchfps', 'karagii', 'tsm_daequan', 'xdaboinextdoorx', 'sydeon'
+        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 
     ]
 };
 
@@ -52,6 +52,14 @@ client.on('message', (channel, tags, message, self) => {
       }
     }
   }  
+});
+
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  if (channel.includes('itzjovens'))
+	if(message.toLowerCase().includes('!ping')) {
+    client.say('itzjovens', `@${tags.username}, Pong!`);
+	}
 });
 
 function onConnectedHandler(addr, port) {
