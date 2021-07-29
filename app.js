@@ -64,7 +64,8 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 function onConnectedHandler(addr, port) {
-    console.log(`* Connected to ${addr}:${port}`);
+	client.say('itzjovens', `Followage Bot has Started!`)
+    	console.log(`* Connected to ${addr}:${port}`);
 }
 
 function syncDelay(milliseconds){
