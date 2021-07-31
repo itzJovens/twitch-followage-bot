@@ -9,7 +9,7 @@ const opts = {
         password: 'oauth:u79zcmhtqum7o9we321k3xhpeh9x71'
     },
     channels: [
-        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 
+        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 'karagii'
     ]
 };
 
@@ -52,6 +52,17 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     client.say('srchfps', `PowerUpL GIFTED SUBS PowerUpR ||`);
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || SRCHFPS`)}
+})
+
+// KARAGII
+client.on("subgift", (channel, username, streakMonths, recipient, methods, userstate) => {
+    // Do your stuff.
+  let senderCount = ~~userstate["msg-param-sender-count"];
+// SRCHFPS
+  if (channel.includes('karagii')) {
+    client.say('karagii', `karagiMula GIFTED SUBS karagiMula`);
+    let senderCount = ~~userstate["msg-param-sender-count"];
+    console.Log(`* Executed Gifted Subs || KARAGII`)}
 })
 
 // TSM_DAEQUAN FOLLOWAGE 
