@@ -95,7 +95,7 @@ client.on('message', (channel, tags, message, self) => {
 	if(message.toLowerCase().includes('|uptime')) {
     		var time = process.uptime();
     		var uptime = (time + "").toHHMMSS();
-	client.say('itzjovens', `@${tags.username}, ${uptime}!`);
+	client.say('itzjovens', `${uptime}`);
 	console.log(`Executed uptime command in #itzjovens channel. || ${uptime} !`)
 	}
 });
