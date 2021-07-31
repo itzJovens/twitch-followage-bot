@@ -92,7 +92,7 @@ client.on('message', (channel, tags, message, self) => {
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
   if (channel.includes('itzjovens'))
-	if(message.toLowerCase().includes('/uptime')) {
+	if(message.toLowerCase().includes('\uptime')) {
     		var time = process.uptime();
     		var uptime = (time + "").toHHMMSS();
 	client.say('itzjovens', `@${tags.username}, ${uptime}!`);
