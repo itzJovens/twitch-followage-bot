@@ -89,6 +89,17 @@ client.on('message', (channel, tags, message, self) => {
 	}
 });
 
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  if (channel.includes('itzjovens'))
+	if(message.toLowerCase().includes('/uptime')) {
+    		var time = process.uptime();
+    		var uptime = (time + "").toHHMMSS();
+	client.say('itzjovens', `@${tags.username}, ${uptime}!`);
+	console.log(`Executed uptime command in #itzjovens channel. || ${uptime} !`)
+	}
+});
+
 function onConnectedHandler(addr, port) {
 	client.say('itzjovens', `Followage Bot has Started!`)
     	console.log(`* Connected to ${addr}:${port}`);
@@ -117,10 +128,4 @@ String.prototype.toHHMMSS = function () {
     if (seconds < 10) {seconds = "0"+seconds;}
     var time    = hours+':'+minutes+':'+seconds;
     return time;
-}
-
-if(commandCheck("/uptime")){
-    var time = process.uptime();
-    var uptime = (time + "").toHHMMSS();
-    console.log(uptime);
 }
