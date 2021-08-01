@@ -60,6 +60,7 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
   let senderCount = ~~userstate["msg-param-sender-count"];
 // SRCHFPS
   if (channel.includes('karagii')) {
+	  syncDelay(3000)
     client.say('karagii', `karagiMula GIFTED SUBS karagiMula`);
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || KARAGII`)}
