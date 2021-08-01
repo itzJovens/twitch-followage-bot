@@ -71,6 +71,31 @@ client.on('message', (channel, tags, message, self) => {
   if(self) return;
   var channel1 = channel
   var message1 = message
+  if (channel.includes('tsm_daequan')){
+  if(message.toLowerCase().includes('!followage')) {
+    client.say('uknwmyname', `!followage ${tags.username} ${channel.slice(1)}`);
+    console.log(`EXECUTED FOLLOWAGE COMMAND FOR ${tags.username} on ${channel}`)}
+  }
+});
+// SECOND PART
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  if (channel.includes('uknwmyname')){
+    if (message.toLowerCase().includes('@itzjovens,')){
+      if (message.toLowerCase().includes('tsm_daequan')){
+      syncDelay(5000)
+      client.say('tsm_daequan', `${message.slice(12)}`)
+      console.log(`EXECUTED FOLLOWAGE COMMAND IN TSM_DAEQUAN CHANNEL`)
+      }
+    }
+  }  
+});
+// UKNWMYNAME
+// FISRT PART
+client.on('message', (channel, tags, message, self) => {
+  if(self) return;
+  var channel1 = channel
+  var message1 = message
   if (channel.includes('xdaboinextdoorx')){
   if(message.toLowerCase().includes('!followage')) {
     client.say('uknwmyname', `!followage ${tags.username} ${channel.slice(1)}`);
