@@ -107,7 +107,7 @@ client.on('message', (channel, tags, message, self) => {
 	if(self) return;
   if (channel.includes('uknwmyname')){
     if (message.toLowerCase().includes('@itzjovens,')){
-      if (message.toLowerCase().includes('tsm_daequan')){
+      if (message.toLowerCase().includes('uknwmyname')){
       syncDelay(5000)
       client.say('xdaboinextdoorx', `${message.slice(12)}`)
       console.log(`EXECUTED FOLLOWAGE COMMAND IN TSM_DAEQUAN CHANNEL`)
