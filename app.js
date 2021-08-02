@@ -84,7 +84,7 @@ client.on('message', (channel, tags, message, self) => {
   if (channel.includes('uknwmyname')){
     if (message.toLowerCase().includes('@itzjovens,')){
       if (message.toLowerCase().includes('tsm_daequan')){
-      client.say('tsm_daequan', `/me ${message.slice(12)}`)
+      client.say('tsm_daequan', `/me ${message.slice(12)} daeKiwi`)
       console.log(`EXECUTED FOLLOWAGE COMMAND IN TSM_DAEQUAN CHANNEL`)
       }
     }
