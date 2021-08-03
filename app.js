@@ -74,8 +74,8 @@ client.on("resub", function (channel, username, months, message, userstate, meth
 // SRCHFPS
   if (channel.includes('sydeon')){
 	  if (prime) {
-		  syncDelay(3000)
-    client.say('uknwmyname', `primer peepoPogStrip`);
+		  syncDelay(5000)
+    client.say('sydeon', `primer peepoPogStrip`);
     console.log(`* Executed Resub || SRCHFPS`)}
   }
 });
@@ -86,8 +86,8 @@ client.on("subscription", function (channel, username, method, message, userstat
 // SRCHFPS
   if (channel.includes('sydeon')){
 	  if (prime) {
-		  syncDelay(3000)
-    client.say('uknwmyname', `primer peepoPogStrip`);
+		  syncDelay(5000)
+    client.say('sydeon', `primer peepoPogStrip`);
     console.log(`* Executed Sub || SYDEON`)}
   }
 });
@@ -96,8 +96,9 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     // Do your stuff.
   let senderCount = ~~userstate["msg-param-sender-count"];
   if (channel.includes('sydeon')) {
-	  syncDelay(3000)
-    client.say('sydeon', `PogU GIFTED SUBS sydeonHype`);
+	  if (senderCount > 5) {
+	  syncDelay(5000)
+    client.say('uknwmyname', `PogU GIFTED SUBS sydeonHype`);
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || SYDEON`)}
 })
