@@ -66,6 +66,17 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     console.Log(`* Executed Gifted Subs || KARAGII`)}
 })
 
+// SYDEON
+client.on("subgift", (channel, username, streakMonths, recipient, methods, userstate) => {
+    // Do your stuff.
+  let senderCount = ~~userstate["msg-param-sender-count"];
+  if (channel.includes('sydeon')) {
+	  syncDelay(3000)
+    client.say('sydeon', `PogU GIFTED SUBS sydeonHype`);
+    let senderCount = ~~userstate["msg-param-sender-count"];
+    console.Log(`* Executed Gifted Subs || SYDEON`)}
+})
+
 // TSM_DAEQUAN FOLLOWAGE 
 // FIRST PART
 client.on('message', (channel, tags, message, self) => {
