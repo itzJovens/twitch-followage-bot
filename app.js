@@ -115,23 +115,61 @@ client.on('message', (channel, tags, message, self) => {
   }  
 });
 
-client.on('message', (channel, tags, message, self) => {
-	if(self) return;
-  if (channel.includes('itzjovens'))
-	if(message.toLowerCase().includes('|ping')) {
-    client.say('itzjovens', `Pong!`);
-	console.log(`Executed ping in #itzjovens channel. BOT IS ALIVE!`)
-	}
-});
+const allowed = [];
 
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
+  let isBroadcaster = channel.slice(1) === tags.username;
+  if (isBroadcaster){
+  if (channel.includes('itzjovens')){
+	if(message.includes("|allow")) {
+      if (allowed.includes(message.slice(7))){
+        client.say('itzjovens', `${message.slice(7)} has already been allowed`)
+      } else { client.say('itzjovens', `@${message.slice(7)} is now allowed. kkatamHi`);
+      allowed.push(message.slice(7))
+}}}}});
+
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  let isBroadcaster = channel.slice(1) === tags.username;
+  if (isBroadcaster){
+  if (channel.includes('itzjovens')){
+	if(message.includes("|remove")) {
+    client.say('itzjovens', `@${message.slice(8)} has now been removed.`);
+      allowed.pop(message.slice(8))
+}}}});
+
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  let isAllowed = allowed.includes(tags.username);
+  let isBroadcaster = channel.slice(1) === tags.username;
+  let allowedUp = isAllowed || isBroadcaster
+  if (allowedUp){
+  if (channel.includes('itzjovens')){
+	if(message.toLowerCase().includes("|ping")) {
+		client.say('itzjovens', `Pong!, ${tags.username} sydeonHey`);
+}}}});
+
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+  let isBroadcaster = channel.slice(1) === tags.username;
+  if (isBroadcaster){
+  if (channel.includes('itzjovens'))
+	if(message === "|ALLOWED") {
+		client.say('itzjovens', `${allowed}`);
+}}});
+
+client.on('message', (channel, tags, message, self) => {
+	if(self) return;
+let isBroadcaster = channel.slice(1) === tags.username;
+  if (isBroadcaster){
   if (channel.includes('itzjovens'))
 	if(message.toLowerCase().includes('|uptime')) {
     		var time = process.uptime();
     		var uptime = (time + "").toHHMMSS();
 	client.say('itzjovens', `${uptime}`);
 	console.log(`Executed uptime command in #itzjovens channel. || ${uptime} !`)
+	}
 	}
 });
 
