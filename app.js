@@ -9,7 +9,7 @@ const opts = {
         password: 'oauth:u79zcmhtqum7o9we321k3xhpeh9x71'
     },
     channels: [
-        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 'karagii'
+        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 'karagii', 'sydeon'
     ]
 };
 
@@ -67,6 +67,31 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
 })
 
 // SYDEON
+client.on("resub", function (channel, username, months, message, userstate, methods) {
+    // Do your stuff.
+  let cumulativeMonths = userstate['msg-param-cumulative-months'];
+	const { prime, plan, planName } = methods;
+// SRCHFPS
+  if (channel.includes('sydeon')){
+	  if (prime) {
+		  syncDelay(3000)
+    client.say('itzjovens', `primer peepoPogStrip`);
+    console.log(`* Executed Resub || SRCHFPS`)}
+  }
+});
+
+client.on("subscription", function (channel, username, method, message, userstate) {
+    // Do your stuff.
+	const { prime, plan, planName } = methods;
+// SRCHFPS
+  if (channel.includes('sydeon')){
+	  if (prime) {
+		  syncDelay(3000)
+    client.say('itzzjovens', `primer peepoPogStrip`);
+    console.log(`* Executed Sub || SYDEON`)}
+  }
+});
+
 client.on("subgift", (channel, username, streakMonths, recipient, methods, userstate) => {
     // Do your stuff.
   let senderCount = ~~userstate["msg-param-sender-count"];
