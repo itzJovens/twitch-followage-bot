@@ -32,7 +32,7 @@ client.on("resub", function (channel, username, months, message, userstate, meth
   let cumulativeMonths = userstate['msg-param-cumulative-months'];
 // SRCHFPS
   if (channel.includes('srchfps')){
-    client.say('itzjovens', `PowerUpL Thanks for resubscribing @${username} for ${cumulativeMonths} MONTHS! PowerUpR`);
+    client.say('uknwmyname', `PowerUpL Thanks for resubscribing @${username} for ${cumulativeMonths} MONTHS! PowerUpR`);
     console.log(`* Executed Resub || SRCHFPS`)}
 });
 
@@ -40,7 +40,7 @@ client.on("subscription", function (channel, username, method, message, userstat
     // Do your stuff.
 // SRCHFPS
   if (channel.includes('srchfps')){
-    client.say('srchfps', `PowerUpR Thanks for subscribing @${username} PowerUpR ||`);
+    client.say('uknwmyname', `PowerUpR Thanks for subscribing @${username} PowerUpR ||`);
     console.log(`* Executed Sub || SRCHFPS`)}
 });
 
@@ -49,7 +49,7 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
   let senderCount = ~~userstate["msg-param-sender-count"];
 // SRCHFPS
   if (channel.includes('srchfps')) {
-    client.say('srchfps', `PowerUpL GIFTED SUBS PowerUpR ||`);
+    client.say('uknwmyname', `PowerUpL GIFTED SUBS PowerUpR ||`);
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || SRCHFPS`)}
 })
@@ -75,7 +75,7 @@ client.on("resub", function (channel, username, months, message, userstate, meth
   if (channel.includes('sydeon')){
 	  if (prime) {
 		  syncDelay(3000)
-    client.say('itzjovens', `primer peepoPogStrip`);
+    client.say('uknwmyname', `primer peepoPogStrip`);
     console.log(`* Executed Resub || SRCHFPS`)}
   }
 });
@@ -87,7 +87,7 @@ client.on("subscription", function (channel, username, method, message, userstat
   if (channel.includes('sydeon')){
 	  if (prime) {
 		  syncDelay(3000)
-    client.say('itzzjovens', `primer peepoPogStrip`);
+    client.say('uknwmyname', `primer peepoPogStrip`);
     console.log(`* Executed Sub || SYDEON`)}
   }
 });
