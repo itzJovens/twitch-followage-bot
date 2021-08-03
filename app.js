@@ -82,7 +82,7 @@ client.on("resub", function (channel, username, months, message, userstate, meth
 
 client.on("subscription", function (channel, username, method, message, userstate) {
     // Do your stuff.
-	const { prime, plan, planName } = methods;
+	const { prime, plan, planName } = method;
 // SRCHFPS
   if (channel.includes('sydeon')){
 	  if (prime) {
