@@ -101,6 +101,7 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     client.say('uknwmyname', `PogU GIFTED SUBS sydeonHype`);
     let senderCount = ~~userstate["msg-param-sender-count"];
     console.Log(`* Executed Gifted Subs || SYDEON`)}
+  }
 })
 
 // TSM_DAEQUAN FOLLOWAGE 
