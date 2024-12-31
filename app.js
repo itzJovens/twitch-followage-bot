@@ -46,7 +46,7 @@ client.on('message', (channel, tags, message, self) => {
     if (message.toLowerCase().includes('@itzjovens,')){
       if (message.toLowerCase().includes('valkyrae')){
       client.say('valkyrae', `/me ${message.slice(12)} kkatamWood`)
-      console.log(`EXECUTED FOLLOWAGE COMMAND IN TSM_DAEQUAN CHANNEL`)
+      console.log(`EXECUTED FOLLOWAGE COMMAND IN VALKYRAE'S CHANNEL`)
       }
     }
   }  
