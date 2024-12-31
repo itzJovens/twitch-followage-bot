@@ -9,7 +9,7 @@ const opts = {
         password: 'oauth:u79zcmhtqum7o9we321k3xhpeh9x71'
     },
     channels: [
-        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx',
+        'itzjovens', 'uknwmyname', 'tsm_daequan', 'xdaboinextdoorx', 'valkyrae',
     ]
 };
 
@@ -33,7 +33,7 @@ client.on('message', (channel, tags, message, self) => {
   if(self) return;
   var channel1 = channel
   var message1 = message
-  if (channel.includes('tsm_daequan')){
+  if (channel.includes('valkyrae')){
   if(message.toLowerCase().includes('!followage')) {
     client.say('uknwmyname', `!followage ${tags.username} ${channel.slice(1)}`);
     console.log(`EXECUTED FOLLOWAGE COMMAND FOR ${tags.username} on ${channel}`)}
@@ -44,8 +44,8 @@ client.on('message', (channel, tags, message, self) => {
 	if(self) return;
   if (channel.includes('uknwmyname')){
     if (message.toLowerCase().includes('@itzjovens,')){
-      if (message.toLowerCase().includes('tsm_daequan')){
-      client.say('tsm_daequan', `/me ${message.slice(12)} daeKiwi`)
+      if (message.toLowerCase().includes('valkyrae')){
+      client.say('valkyrae', `/me ${message.slice(12)} kkatamWood`)
       console.log(`EXECUTED FOLLOWAGE COMMAND IN TSM_DAEQUAN CHANNEL`)
       }
     }
